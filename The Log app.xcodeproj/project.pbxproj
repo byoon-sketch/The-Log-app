@@ -15,6 +15,7 @@
 		DE362E512436C21D00C9D73B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE362E4F2436C21D00C9D73B /* LaunchScreen.storyboard */; };
 		DE362E5C2436C21E00C9D73B /* The_Log_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE362E5B2436C21E00C9D73B /* The_Log_appTests.swift */; };
 		DE362E672436C21E00C9D73B /* The_Log_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE362E662436C21E00C9D73B /* The_Log_appUITests.swift */; };
+		DEB7727F243E9BF00018C539 /* log.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DEB7727E243E9BF00018C539 /* log.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DE362E622436C21E00C9D73B /* The Log appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Log appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE362E662436C21E00C9D73B /* The_Log_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Log_appUITests.swift; sourceTree = "<group>"; };
 		DE362E682436C21E00C9D73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB7727E243E9BF00018C539 /* log.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = log.jpg; path = ../../log.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		DE362E382436C20B00C9D73B = {
 			isa = PBXGroup;
 			children = (
+				DE362E462436C20C00C9D73B /* SceneDelegate.swift */,
 				DE362E432436C20C00C9D73B /* The Log app */,
 				DE362E5A2436C21E00C9D73B /* The Log appTests */,
 				DE362E652436C21E00C9D73B /* The Log appUITests */,
@@ -100,9 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				DE362E442436C20C00C9D73B /* AppDelegate.swift */,
-				DE362E462436C20C00C9D73B /* SceneDelegate.swift */,
 				DE362E482436C20C00C9D73B /* ViewController.swift */,
 				DE362E4A2436C20C00C9D73B /* Main.storyboard */,
+				DEB7727E243E9BF00018C539 /* log.jpg */,
 				DE362E4D2436C21D00C9D73B /* Assets.xcassets */,
 				DE362E4F2436C21D00C9D73B /* LaunchScreen.storyboard */,
 				DE362E522436C21D00C9D73B /* Info.plist */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB7727F243E9BF00018C539 /* log.jpg in Resources */,
 				DE362E512436C21D00C9D73B /* LaunchScreen.storyboard in Resources */,
 				DE362E4E2436C21D00C9D73B /* Assets.xcassets in Resources */,
 				DE362E4C2436C20C00C9D73B /* Main.storyboard in Resources */,
