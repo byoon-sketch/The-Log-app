@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+    //connecting the textfields and pickerview that is used
     @IBOutlet weak var DS: UITextField!
     @IBOutlet weak var DL: UITextField!
     @IBOutlet weak var L: UITextField!
@@ -17,6 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var W: UITextField!
     @IBOutlet weak var MC: UITextField!
     
+    //declaring the variables used and the array used for the picker view
     var species = ""
     var Species: [String] = [String]()
     var D: Double = 0
@@ -30,6 +31,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.didReceiveMemoryWarning()
     }
     
+    //loading the pickerview with the correct components
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
           return 1
     }
@@ -46,7 +48,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         species = Species[row]
     }
     
+    //on click method to complete the actual calculations
     @IBAction func onClickCalc(_ sender: UIButton) {
+        //initializing the diameter variables
         guard let DSDouble = Double(DS.text!) else{
             print("Not a correct value")
             return
@@ -55,13 +59,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             print("Not a correct value")
             return
         }
+        //finding the average diameter
         D = (DSDouble + DLDouble)/2
+        //initializing the length
         guard let LDouble = Double(L.text!) else{
             print("Not a correct value")
             return
         }
-        V = LDouble * 3.141592654 * sqrt((D/2))
+        //finding the volume
+        V = LDouble * 3.141592654 * (D/2)*(D/2)
         print(V)
+        //calculating the mass based on the density of the species of wood selected
         if (species == "Oak"){
         M = 673*V
         }
@@ -71,6 +79,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if (species == "Ash"){
         M = 641*V
         }
+        //using moisture content to find a new mass
         guard let MCDouble = Double(MC.text!) else{
             print("Not a correct value")
             return
@@ -78,6 +87,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         MW = (M * MCDouble)/100
         Mass = MW + M
         Final = Int(Mass)
+        //displaying the final mass
         W.text = String(Final) + " kg"
     }
     
@@ -87,7 +97,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         self.S.delegate = self
         self.S.dataSource = self
-        
+        //initializing the species array
         Species = ["Oak", "Maple", "Ash"]
         
     }
